@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="student_template"
+		template="/WEB-INF/views/template/student_template.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+	<definition name="student.indexHome" extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/index_student.jsp"></put-attribute>
+	</definition>
+	<definition name="student.exam" extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/exam.jsp"></put-attribute>
+	</definition>
+	<definition name="student.profile"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/profile.jsp"></put-attribute>
+	</definition>
+
+	<definition name="student.updateProfile"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/updateProfile.jsp"></put-attribute>
+	</definition>
+	<definition name="student.selectExam"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/selectExam.jsp"></put-attribute>
+	</definition>
+	<definition name="student.exam" extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/exam.jsp"></put-attribute>
+	</definition>
+
+	<definition name="student.seeResult"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/seeResult.jsp"></put-attribute>
+	</definition>
+	
+	<definition name="student.resultList"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/resultList.jsp"></put-attribute>
+	</definition>
+	<definition name="student.listfeedback"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/listfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="student.repfeedback"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/repplyfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="student.feedback"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/feedback.jsp"></put-attribute>
+	</definition>
+	<definition name="student.resultDetail"
+		extends="student_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/student/resultDetail.jsp"></put-attribute>
+	</definition>
+	
+
+</tiles-definitions>

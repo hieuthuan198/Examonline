@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="teacher_template"
+		template="/WEB-INF/views/template/teacher_template.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+
+	<definition name="teacher.indexHome"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/indexTeacher.jsp"></put-attribute>
+	</definition>
+	<definition name="login.loginn" extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/login/login.jsp"></put-attribute>
+	</definition>
+
+	<definition name="teacher_template"
+		template="/WEB-INF/views/template/teacher_template.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+
+	<definition name="teacher.indexTeacher"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/indexTeacher.jsp"></put-attribute>
+	</definition>
+
+	<definition name="teacher.profile"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/profile.jsp"></put-attribute>
+	</definition>
+
+	<definition name="teacher.updateProfile"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/updateProfile.jsp"></put-attribute>
+	</definition>
+
+	<definition name="teacher.uploadQuestions"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/uploadQuestions.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.questionList"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/questionList.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.uploadCV"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/uploadCV.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.cvList" extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/cvList.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.cvDetail"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/cvDetail.jsp"></put-attribute>
+	</definition>
+	
+	
+	<definition name="teacher.listfeedback"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/listfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.repfeedback"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/repplyfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.feedback"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/feedback.jsp"></put-attribute>
+	</definition>
+
+<definition name="teacher.cvdetail"
+		extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/cvDetail.jsp"></put-attribute>
+	</definition>
+	<definition name="teacher.register" extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/register.jsp"></put-attribute>
+			
+	</definition>
+	<definition name="teacher.importQuestions" extends="teacher_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/teacher/questionImport.jsp"></put-attribute>
+			
+	</definition>
+
+</tiles-definitions>

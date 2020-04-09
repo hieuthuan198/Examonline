@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="admin_template"
+		template="/WEB-INF/views/template/admin_template.jsp">
+		<put-attribute name="content" value=""></put-attribute>
+	</definition>
+	<definition name="login_admin.admin_login"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/login_admin/admin_login.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.addcontent" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/home_content/add_content.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.homecontent"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/home_content/homeContent.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.listSubject"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/subject/listSubjectAdmin.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.indexAdmin" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/indexAdmin.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.addSubject" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/subject/addSubject.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.updateSubject"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/subject/updateSubject.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.listfeedback"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/feedback/listfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.repfeedback"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/feedback/repplyfeedback.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.listcv" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/cv/listcv.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.detailcv" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/cv/detail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.listexam" extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/exam/list.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.listquestions"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/questions/list.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.listquestions"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/questions/list.jsp"></put-attribute>
+	</definition>
+
+
+	<definition name="admin.listaccount"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/account/list.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.detailaccount"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/account/detail.jsp"></put-attribute>
+	</definition>
+
+	<definition name="admin.detailquestion"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/questions/detail.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.resultDetail"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/exam/detail.jsp"></put-attribute>
+	</definition>
+	<definition name="admin.examQuestionDetail"
+		extends="admin_template">
+		<put-attribute name="content"
+			value="/WEB-INF/views/admin/exam/questionDetail.jsp"></put-attribute>
+	</definition>
+
+</tiles-definitions>
