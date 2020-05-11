@@ -34,10 +34,10 @@
 			<h3 class="title-w3 mb-5 text-center text-wh font-weight-bold">Register
 				Now</h3>
 			<s:form method="post" modelAttribute="account"
-				action="${pageContext.request.contextPath }/student-register"
+				action="${pageContext.request.contextPath }/student-register/save"
 				>
 				<div class="form-group">
-					<label class="col-form-label">Full name</label>
+					<label class="col-form-label">Ten</label>
 					<s:input path="fullname" type="text" class="form-control"
 						placeholder="Full name" name="fullname" />
 					<s:errors path="fullname" cssClass="error"></s:errors>
@@ -84,8 +84,10 @@
 				</div>
 				<div class="form-group">
 					<label class="col-form-label">Password</label>
-					<s:input path="password" type="Password" class="form-control"
-						placeholder="Password" name="password" required="" />
+				  	<input type="Password" class="form-control"
+						placeholder="Password" name="password" required="required">
+					<!--<s:input path="password" type="Password" class="form-control"
+						placeholder="Password" name="password" required="" />-->
 					<s:errors path="password" cssClass="error"></s:errors>
 				</div>
 

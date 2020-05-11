@@ -78,7 +78,7 @@ public class StudentExamController {
 
 			List<Question> questions = new ArrayList<Question>();
 			try {
-				for (int i = 0; i < 10; i++) {
+				for (int i = 0; i < 11; i++) {
 					questions.add(allQuestions.get(i));
 				}
 			} catch (IndexOutOfBoundsException e) {

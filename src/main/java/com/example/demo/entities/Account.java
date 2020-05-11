@@ -35,7 +35,7 @@ public class Account implements java.io.Serializable {
 	@Length(min = 3, max =30)
 	private String username;
 	@NotEmpty
-	@Length(min = 3, max =30)
+	@Length(min = 3, max =60)
 	//@Pattern(regexp = "((?=.*\\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%]).{6,200})")
 	private String password;
 	@NotEmpty

@@ -2,6 +2,7 @@ package com.example.demo.controller.home;
 
 import javax.validation.Valid;
 
+import org.mindrot.jbcrypt.BCrypt;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
@@ -10,6 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.demo.entities.Account;
 import com.example.demo.entities.AccountRole;
@@ -18,6 +20,7 @@ import com.example.demo.service.AccountRoleService;
 import com.example.demo.service.AccountService;
 import com.example.demo.service.RoleService;
 import com.example.demo.validator.AccountValidator;
+
 
 @Controller
 @RequestMapping({ "student-register" })
@@ -42,8 +45,10 @@ public class StudentRegisterController {
 		return "home.register";
 	}
 
-	@RequestMapping(method = RequestMethod.POST)
-	public String register(@ModelAttribute("account") @Valid Account account, BindingResult bindingResult,
+	@RequestMapping(value="save",method = RequestMethod.POST)
+	public String register(@ModelAttribute("account") @Valid Account account,@ModelAttribute("roleaccount") AccountRole accountRole,
+			@ModelAttribute("roles") Role role, BindingResult bindingResult,
+			@RequestParam("password") String password,
 			ModelMap modelMap) {
 		accountValidator.validate(account, bindingResult);
 		if (bindingResult.hasErrors()) {
@@ -51,17 +56,27 @@ public class StudentRegisterController {
 			return "home.register";
 		} else if (account.getUsername() != null && account.getPassword() != null) {
 			try {
-				account.setPassword(new BCryptPasswordEncoder().encode(account.getPassword()));
+				//account.setPassword(new BCryptPasswordEncoder().encode(account.getPassword()));
+			//	account.setPassword(new BCryptPasswordEncoder().encode(account.getPassword()));
+				account.setPassword(BCrypt.hashpw(password,BCrypt.gensalt()));
 				accountService.save(account);
-				Role role = new Role();
-				role = roleService.findById(3);
-				AccountRole accountRole = new AccountRole();
+				//Role role = new Role();
+				//role = roleService.findById(3);
+	
+			//	AccountRole accountRole = new AccountRole();
+				//accountRole.setAccount(account);
+			//	accountRole.setRole(role);
+				
+				role.setId(3);
+			
 				accountRole.setAccount(account);
 				accountRole.setRole(role);
-
 				accountRoleService.save(accountRole);
 			} catch (Exception e) {
+				//System.out.print("---------------------------------->sssss");
 				return "home.register";
+				//e.printStackTrace();
+				
 			}
 			return "login.login";
 		}
